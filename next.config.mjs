@@ -1,20 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 
-  images: {
-    domains: [
-      "127.0.0.1"
+ images: {
+     domains: [
+      "grocery-strapi-lhum.onrender.com"
 
     ],
     remotePatterns: [
       {
-        protocol: 'http',
-        hostname: '127.0.0.1',
-        port: '1337',
+        protocol: 'https',
+        hostname: 'grocery-strapi-lhum.onrender.com',
         pathname: '/uploads/**',
       },
     ],
   },
+
 
   reactCompiler: true,
 };

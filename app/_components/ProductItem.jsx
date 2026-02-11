@@ -24,7 +24,7 @@ const ProductItem = ({ product }) => {
         <div className='p-3 flex flex-col items-center justify-center border rounded-lg hover:scale-105 transition-all cursor-pointer bg-white'>
             <Image
                 src={product?.image?.[0]?.url ?
-                    `http://127.0.0.1:1337${product?.image?.[0]?.url}` : '/placeholder.jpg'}
+                    `https://grocery-strapi-lhum.onrender.com${product?.image?.[0]?.url}` : '/placeholder.jpg'}
                 width={150}
                 height={150}
                 alt={product?.name || 'product'}

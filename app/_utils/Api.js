@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosGlobal = axios.create({
-    baseURL: "http://127.0.0.1:1337/api",
+    baseURL: "https://grocery-strapi-lhum.onrender.com/api",
 })
 
 const getCategory = () => {

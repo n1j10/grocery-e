@@ -50,7 +50,7 @@ const productDealts = ({ product }) => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
             <Image className='w-full h-full object-cover'
-                src={`http://127.0.0.1:1337${product?.image?.[0]?.url}`}
+                src={`https://grocery-strapi-lhum.onrender.com${product?.image?.[0]?.url}`}
                 width={150}
                 height={150}
                 unoptimized={true}

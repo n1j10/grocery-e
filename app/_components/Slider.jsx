@@ -18,7 +18,7 @@ function Slider({ sliderList }) {
 
             <CarouselItem key={index}>
 
-              <Image src={`http://127.0.0.1:1337${slider?.image[0]?.url}`}
+              <Image src={`https://grocery-strapi-lhum.onrender.com${slider?.image[0]?.url}`}
                 alt={slider?.title || 'slider'}
                 width={1000}
                 height={400}

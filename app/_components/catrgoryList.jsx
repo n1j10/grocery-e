@@ -18,7 +18,7 @@ function CategoryList({ categoryList }) {
                         >
                             <Link href={"/products-category/" + category.name} className='overflow-hidden rounded-full bg-white p-2 shadow-sm group-hover:shadow-md transition-all'>
                                 <Image
-                                    src={`http://127.0.0.1:1337${category?.icon?.[0]?.url}`}
+                                    src={`https://grocery-strapi-lhum.onrender.com${category?.icon?.[0]?.url}`}
                                     width={70}
                                     height={70}
                                     unoptimized={true}
