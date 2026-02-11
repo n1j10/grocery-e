@@ -5,17 +5,30 @@ import Api from "./_utils/Api";
 import CategoryList from "./_components/catrgoryList";
 import ProductList from "./_components/ProductList";
 import Footer from "./_components/footer";
+
+export const dynamic = 'force-dynamic';
 export default async function Home() {
 
-  const sliderList = await Api.getSlider();
-  // console.log(sliderList);
+  let sliderList = [];
+  try {
+    sliderList = await Api.getSlider();
+  } catch (error) {
+    console.error("Failed to fetch slider:", error);
+  }
 
+  let categoryList = [];
+  try {
+    categoryList = await Api.getCategoryList();
+  } catch (error) {
+    console.error("Failed to fetch categories:", error);
+  }
 
-  const categoryList = await Api.getCategoryList();
-  // console.log("Categories:", categoryList);
-
-  const productList = await Api.getProductList();
-  console.log("ProductList:", productList);
+  let productList = [];
+  try {
+    productList = await Api.getProductList();
+  } catch (error) {
+    console.error("Failed to fetch products:", error);
+  }
 
   return (
 

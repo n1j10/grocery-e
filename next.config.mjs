@@ -2,10 +2,6 @@
 const nextConfig = {
 
  images: {
-     domains: [
-      "grocery-strapi-lhum.onrender.com"
-
-    ],
     remotePatterns: [
       {
         protocol: 'https',
