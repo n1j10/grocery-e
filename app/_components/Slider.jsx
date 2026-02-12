@@ -18,7 +18,7 @@ function Slider({ sliderList }) {
 
             <CarouselItem key={index}>
 
-              <Image src={`https://grocery-strapi-lhum.onrender.com${slider?.image[0]?.url}`}
+              <Image src={`https://grocery-n-strapi-production.up.railway.app${slider?.image[0]?.url}`}
                 alt={slider?.title || 'slider'}
                 width={1000}
                 height={400}

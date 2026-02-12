@@ -27,7 +27,7 @@ function CartItemList({ cartItemsList }) {
                             <Image
 //  src={product?.image?.[0]?.url ?
 //                     `http://127.0.0.1:1337${product?.image?.[0]?.url}` : '/placeholder.jpg'}
-                                src={product?.image ? `https://grocery-strapi-lhum.onrender.com${product?.image}` : '/placeholder.jpg'}
+                                src={product?.image ? `https://grocery-n-strapi-production.up.railway.app${product?.image}` : '/placeholder.jpg'}
 
                                 alt={product.name || 'product image'}
                                 width={80}

@@ -119,7 +119,7 @@ const Header = () => {
                     <DropdownMenuItem className=" cursor-pointer flex gap-2 items-center">
                       {cat?.icon?.[0]?.url ? (
                         <Image
-                          src={`https://grocery-strapi-lhum.onrender.com${cat?.icon?.[0]?.url}`}
+                          src={`https://grocery-n-strapi-production.up.railway.app${cat?.icon?.[0]?.url}`}
                           alt={cat.name}
                           width={20}
                           height={20}
