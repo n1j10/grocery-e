@@ -5,7 +5,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'grocery-strapi-lhum.onrender.com',
+        hostname: 'grocery-n-strapi-production.up.railway.app',
         pathname: '/uploads/**',
       },
     ],
