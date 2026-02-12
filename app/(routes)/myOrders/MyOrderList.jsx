@@ -10,7 +10,7 @@ const MyOrderList = ({ orderItem }) => {
             <Image
                 src={
                     imageUrl
-                        ? `http://127.0.0.1:1337${imageUrl}`
+                        ? `https://grocery-n-strapi-production.up.railway.app${imageUrl}`
                         : '/placeholder.jpg'
                 }
                 alt={product?.name || 'Product image'}

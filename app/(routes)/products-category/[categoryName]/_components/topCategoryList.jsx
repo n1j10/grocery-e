@@ -20,7 +20,7 @@ const TopCategoryList = ({ categoryList, selectedCategory }) => {
                             className={`overflow-hidden p-1 shadow-sm group-hover:shadow-md transition-all 
                             ${selectedCategory==category.name?'bg-[#df7747] text-dark': 'bg-white'}`}>
                                 <Image
-                                    src={`http://127.0.0.1:1337${category?.icon?.[0]?.url}`}
+                                    src={`https://grocery-n-strapi-production.up.railway.app${category?.icon?.[0]?.url}`}
                                     width={70}
                                     height={70}
                                     unoptimized={true}
