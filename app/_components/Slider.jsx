@@ -1,6 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import Api from '../_utils/Api'
+import { getStrapiMediaUrl } from '@/lib/strapi'
 import {
   Carousel,
   CarouselContent,
@@ -18,7 +19,7 @@ function Slider({ sliderList }) {
 
             <CarouselItem key={index}>
 
-              <Image src={`https://grocery-n-strapi-production.up.railway.app${slider?.image[0]?.url}`}
+              <Image src={getStrapiMediaUrl(slider?.image?.[0]?.url) || '/placeholder.jpg'}
                 alt={slider?.title || 'slider'}
                 width={1000}
                 height={400}

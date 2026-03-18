@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation'
 import { toast } from 'sonner'
 import Api from '../_utils/Api'
 import { CartContext } from '../_context/cartContext'
+import { getStrapiMediaUrl } from '@/lib/strapi'
 const productDealts = ({ product }) => {
 
     const [productToaolPrice, setProductToaolPrice] = useState(
@@ -50,7 +51,7 @@ const productDealts = ({ product }) => {
         <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
 
             <Image className='w-full h-full object-cover'
-                src={`https://grocery-n-strapi-production.up.railway.app${product?.image?.[0]?.url}`}
+                src={getStrapiMediaUrl(product?.image?.[0]?.url) || '/placeholder.jpg'}
                 width={150}
                 height={150}
                 unoptimized={true}

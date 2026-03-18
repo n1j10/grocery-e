@@ -20,6 +20,7 @@ import {
 import { toast } from "sonner"
 import { useRouter } from 'next/navigation'
 import { CartContext } from '../_context/cartContext'
+import { getStrapiMediaUrl } from '@/lib/strapi'
 import {
   Sheet,
   SheetClose,
@@ -119,7 +120,7 @@ const Header = () => {
                     <DropdownMenuItem className=" cursor-pointer flex gap-2 items-center">
                       {cat?.icon?.[0]?.url ? (
                         <Image
-                          src={`https://grocery-n-strapi-production.up.railway.app${cat?.icon?.[0]?.url}`}
+                          src={getStrapiMediaUrl(cat?.icon?.[0]?.url)}
                           alt={cat.name}
                           width={20}
                           height={20}

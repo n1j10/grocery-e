@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Trash } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { getStrapiMediaUrl } from '@/lib/strapi'
 function CartItemList({ cartItemsList }) {
 
     const [SubTotal, setSubTotal] = useState(0);
@@ -25,9 +26,7 @@ function CartItemList({ cartItemsList }) {
                     <div className='flex justify-between items-center' key={index}>
                         <div className='flex items-center gap-4 mt-5'>
                             <Image
-//  src={product?.image?.[0]?.url ?
-//                     `http://127.0.0.1:1337${product?.image?.[0]?.url}` : '/placeholder.jpg'}
-                                src={product?.image ? `https://grocery-n-strapi-production.up.railway.app${product?.image}` : '/placeholder.jpg'}
+                                src={getStrapiMediaUrl(product?.image) || '/placeholder.jpg'}
 
                                 alt={product.name || 'product image'}
                                 width={80}

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
+import { getStrapiMediaUrl } from '@/lib/strapi';
 
 
 const MyOrderList = ({ orderItem }) => {
@@ -10,7 +11,7 @@ const MyOrderList = ({ orderItem }) => {
             <Image
                 src={
                     imageUrl
-                        ? `https://grocery-n-strapi-production.up.railway.app${imageUrl}`
+                        ? getStrapiMediaUrl(imageUrl)
                         : '/placeholder.jpg'
                 }
                 alt={product?.name || 'Product image'}

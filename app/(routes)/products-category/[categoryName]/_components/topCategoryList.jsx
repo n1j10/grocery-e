@@ -3,6 +3,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { getStrapiMediaUrl } from '@/lib/strapi'
 const TopCategoryList = ({ categoryList, selectedCategory }) => {
 
     return (
@@ -20,7 +21,7 @@ const TopCategoryList = ({ categoryList, selectedCategory }) => {
                             className={`overflow-hidden p-1 shadow-sm group-hover:shadow-md transition-all 
                             ${selectedCategory==category.name?'bg-[#df7747] text-dark': 'bg-white'}`}>
                                 <Image
-                                    src={`https://grocery-n-strapi-production.up.railway.app${category?.icon?.[0]?.url}`}
+                                    src={getStrapiMediaUrl(category?.icon?.[0]?.url) || '/placeholder.jpg'}
                                     width={70}
                                     height={70}
                                     unoptimized={true}

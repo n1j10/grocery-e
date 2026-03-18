@@ -1,7 +1,8 @@
 import axios from "axios";
+import { STRAPI_API_URL, getStrapiMediaUrl } from "@/lib/strapi";
 
 const axiosGlobal = axios.create({
-    baseURL: "https://grocery-n-strapi-production.up.railway.app/api",
+    baseURL: STRAPI_API_URL,
 })
 
 const getCategory = () => {
@@ -68,7 +69,7 @@ const getCartItems = (userId, jwt) => axiosGlobal.get("/user-carts?filters[userI
         return {
             name: product?.name || '',
             quantity: item.quantity || 1,
-            image: product?.image?.[0]?.url || '',
+            image: getStrapiMediaUrl(product?.image?.[0]?.url) || '',
             amount: item.amount || 0,
             id: item.id,
             sellingPrice: product?.sellingPrice || 0,

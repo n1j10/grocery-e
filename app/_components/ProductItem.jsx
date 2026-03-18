@@ -10,6 +10,7 @@ import {
     DialogTrigger,
 } from "@/components/ui/dialog"
 import ProductDealts from './productDealts'
+import { getStrapiMediaUrl } from '@/lib/strapi'
 
 const ProductItem = ({ product }) => {
     {/* another way to do it below with code below*/ }
@@ -23,8 +24,7 @@ const ProductItem = ({ product }) => {
     return (
         <div className='p-3 flex flex-col items-center justify-center border rounded-lg hover:scale-105 transition-all cursor-pointer bg-white'>
             <Image
-                src={product?.image?.[0]?.url ?
-                    `https://grocery-n-strapi-production.up.railway.app${product?.image?.[0]?.url}` : '/placeholder.jpg'}
+                src={getStrapiMediaUrl(product?.image?.[0]?.url) || '/placeholder.jpg'}
                 width={150}
                 height={150}
                 alt={product?.name || 'product'}

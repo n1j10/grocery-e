@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import Api from '../_utils/Api'
 import Link from 'next/link'
+import { getStrapiMediaUrl } from '@/lib/strapi'
 function CategoryList({ categoryList }) {
     return (
         <div className='mt-10'>
@@ -18,7 +19,7 @@ function CategoryList({ categoryList }) {
                         >
                             <Link href={"/products-category/" + category.name} className='overflow-hidden rounded-full bg-white p-2 shadow-sm group-hover:shadow-md transition-all'>
                                 <Image
-                                    src={`https://grocery-n-strapi-production.up.railway.app${category?.icon?.[0]?.url}`}
+                                    src={getStrapiMediaUrl(category?.icon?.[0]?.url) || '/placeholder.jpg'}
                                     width={70}
                                     height={70}
                                     unoptimized={true}

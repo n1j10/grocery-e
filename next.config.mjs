@@ -8,6 +8,11 @@ const nextConfig = {
         hostname: 'grocery-n-strapi-production.up.railway.app',
         pathname: '/uploads/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'useful-birthday-447da4b4ae.strapiapp.com',
+        pathname: '/uploads/**',
+      },
     ],
   },
 
