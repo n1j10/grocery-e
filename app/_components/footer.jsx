@@ -30,13 +30,13 @@ const Footer = () => {
           <ul className="flex flex-wrap justify-center gap-4 text-xs lg:justify-end">
             <li>
               <Link href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-                Terms &amp; Conditions
+                Terms &amp; Conditions 
               </Link>
             </li>
 
             <li>
               <Link href="#" className="text-gray-500 transition hover:opacity-75 dark:text-gray-400">
-                Privacy Policy
+                Privacy Policy 
               </Link>
             </li>
 
